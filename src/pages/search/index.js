@@ -1,10 +1,10 @@
 const $root = document.querySelector('#root');
 
 const $containerWrapper = createContainerWrapper();
-const $title = createTitle({ title: 'PokeLab Busca' });
+const $title = createTitle({ title: 'PokéLab Busca' });
 const $inputSearch = createInputSearch({
   type: 'text',
-  placeholder: 'Digite um nome de Pokemon...',
+  placeholder: 'Digite um nome de Pokémon...',
   dataAttribute: 'input-search',
   nameClass: 'form-control',
 });
@@ -13,7 +13,7 @@ const $buttonSearch = createButtonSearch({
   type: 'submit',
   dataAttribute: 'button-search',
   onClick: 'handleClickSearchPokemon()',
-  textContent: 'Buscar Pokemon',
+  textContent: 'Buscar Pokémon',
 });
 const $cardsWrapper = createCardsWrapper();
 
