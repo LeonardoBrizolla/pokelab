@@ -1,7 +1,9 @@
 const $root = document.querySelector('#root');
 
 const $containerWrapper = createContainerWrapper();
-const $title = createTitle({ title: 'PokéLab Busca' });
+const $navigation = createNavigation();
+const $header = createHeader();
+const $titleSearch = createTitleSearch({ title: 'PokéLab Busca' });
 const $inputSearch = createInputSearch({
   type: 'text',
   placeholder: 'Digite um nome de Pokémon...',
@@ -17,9 +19,11 @@ const $buttonSearch = createButtonSearch({
 });
 const $cardsWrapper = createCardsWrapper();
 
-$containerWrapper.insertAdjacentHTML('beforeend', $title);
+$containerWrapper.insertAdjacentHTML('beforeend', $titleSearch);
 $containerWrapper.insertAdjacentHTML('beforeend', $inputSearch);
 $containerWrapper.insertAdjacentHTML('beforeend', $buttonSearch);
 $containerWrapper.insertAdjacentElement('beforeend', $cardsWrapper);
 
+$root.insertAdjacentHTML('beforeend', $navigation);
+$root.insertAdjacentHTML('beforeend', $header);
 $root.insertAdjacentElement('beforeend', $containerWrapper);
