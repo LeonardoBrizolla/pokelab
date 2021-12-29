@@ -1,1 +1,3 @@
 createTitle();
+createInputSearch();
+createButtonSearch();

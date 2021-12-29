@@ -1,7 +1,6 @@
 function createTitle() {
-  const $title = `
-<h1>PokeLab Busca</h1>
-`;
+  const $title = document.createElement('h1');
 
-  $wrapCards.insertAdjacentHTML('afterbegin', $title);
+  $title.textContent = 'PokeLab Busca';
+  $wrapContainer.insertBefore($title, null);
 }
