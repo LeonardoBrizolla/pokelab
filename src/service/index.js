@@ -1,4 +1,6 @@
 async function getCardPokemon(pokemon) {
+  const createPokemon = card();
+
   await fetch(`https://api.pokemontcg.io/v1/cards?name=${pokemon}`)
     .then((response) => response.json())
     .then((data) => {
@@ -13,7 +15,7 @@ async function getCardPokemon(pokemon) {
           nameClass: 'card -pokelab p-3',
         };
 
-        const $cardPokemon = createCard(pokemon);
+        const $cardPokemon = createPokemon(pokemon);
 
         $cardsWrapper.insertAdjacentHTML('beforeend', $cardPokemon);
       }
