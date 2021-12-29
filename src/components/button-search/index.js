@@ -1,14 +1,16 @@
-function createButtonSearch() {
-  const $buttonSearch = `
-    <button
-      class="btn btn-primary"
-      type="submit"
-      data-search="button-search"
-      onClick="handleClickSearchPokemon()"
-    >
-      Buscar Pokemon
-    </button>
-  `;
-
-  return $buttonSearch;
-}
+const createButtonSearch = ({
+  nameClass,
+  type,
+  dataAttribute,
+  onClick,
+  textContent,
+}) => `
+  <button
+    class="${nameClass}"
+    type="${type}"
+    data-search="${dataAttribute}"
+    onClick="${onClick}"
+  >
+    ${textContent}
+  </button>
+`;

@@ -1,12 +1,8 @@
-function createInputSearch() {
-  const $inputSearch = `
-    <input
-      type="text"
-      placeholder="Pikachu..."
-      data-search="input-search"
-      class="form-control"
-    />
-  `;
-
-  return $inputSearch;
-}
+const createInputSearch = ({ type, placeholder, dataAttribute, nameClass }) => `
+  <input
+    type="${type}"
+    placeholder="${placeholder}"
+    data-search="${dataAttribute}"
+    class="${nameClass}"
+  />
+`;

@@ -7,11 +7,15 @@ async function getCardPokemon(pokemon) {
           '[data-wrapper="cards-wrapper"]'
         );
 
-        const imageUrlCard = data.cards[index].imageUrlHiRes;
+        const pokemon = {
+          name: data.cards[index].name,
+          card: data.cards[index].imageUrlHiRes,
+          nameClass: 'card -pokelab p-3',
+        };
 
-        const $card = createCard(imageUrlCard);
+        const $cardPokemon = createCard(pokemon);
 
-        $cardsWrapper.insertAdjacentHTML('beforeend', $card);
+        $cardsWrapper.insertAdjacentHTML('beforeend', $cardPokemon);
       }
     });
 }

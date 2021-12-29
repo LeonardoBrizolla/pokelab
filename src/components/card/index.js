@@ -1,9 +1,9 @@
-function createCard(url) {
+function createCard({ name, card, nameClass }) {
   const $card = `
     <img
-      src="${url}"
-      alt=""
-      class="card -pokelab p-3"
+      src="${card}"
+      alt="Card ${name}"
+      class="${nameClass}"
     />
   `;
 

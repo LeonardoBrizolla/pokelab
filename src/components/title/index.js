@@ -1,6 +1,3 @@
-function createTitle() {
-  const $title = `
-    <h1>PokeLab Busca</h1>
-  `;
-  return $title;
-}
+const createTitle = ({ title }) => `
+	<h1>${title}</h1>
+`;
