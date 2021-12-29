@@ -1,9 +1,12 @@
 function createInputSearch() {
-  const $inputSearch = document.createElement('input');
+  const $inputSearch = `
+    <input
+      type="text"
+      placeholder="Pikachu..."
+      data-search="input-search"
+      class="form-control"
+    />
+  `;
 
-  $inputSearch.type = 'text';
-  $inputSearch.placeholder = 'Pikachu...';
-  $inputSearch.dataset.search = 'input-search';
-  $inputSearch.classList.add('form-control');
-  $wrapContainer.insertBefore($inputSearch, null);
+  return $inputSearch;
 }

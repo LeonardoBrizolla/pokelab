@@ -1,11 +1,5 @@
-function handleClickSearchPokemon() {
-  const $buttonSearch = document.querySelector(`[data-search="button-search"]`);
+async function handleClickSearchPokemon() {
   const $inputSearch = document.querySelector(`[data-search="input-search"]`);
-
-  $buttonSearch.addEventListener('click', () => {
-    const pokemon = $inputSearch.value;
-    getPokemon(pokemon);
-  });
+  const pokemon = $inputSearch.value;
+  await getCardPokemon(pokemon);
 }
-
-handleClickSearchPokemon();
