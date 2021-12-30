@@ -17,7 +17,7 @@ async function getCardPokemon(pokemon) {
 
         const $cardPokemon = createPokemon(pokemon);
 
-        $cardsWrapper.insertAdjacentHTML('beforeend', $cardPokemon);
+        $cardsWrapper.insertAdjacentHTML('afterbegin', $cardPokemon);
       }
     });
 }

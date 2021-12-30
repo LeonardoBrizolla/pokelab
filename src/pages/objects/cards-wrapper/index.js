@@ -5,6 +5,7 @@ function createCardsWrapper() {
   $cardsWrapper.classList.add('flex-wrap');
   $cardsWrapper.classList.add('justify-content-around');
   $cardsWrapper.classList.add('mt-3');
+  $cardsWrapper.classList.add('sticky-bottom');
   $cardsWrapper.dataset.wrapper = 'cards-wrapper';
 
   return $cardsWrapper;

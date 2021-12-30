@@ -5,7 +5,7 @@ const createHeader = () => {
   $style.textContent = `
   header.-pokelab {
     background-color: #383a59;
-    padding: 60px 0 60px;
+    padding: 120px 0 80px;
   }
   .-pokelab > img {
     width: 200px;
@@ -25,7 +25,6 @@ const createHeader = () => {
       <img src="../../../img/logo-pokemon.svg" alt="Logo Pokémon" />
       <h1>PokéLab</h1>
       <h2 class="fs-3 display-3">Busque as cartas do seu Pokémon favorito</h2>
-      <a href="#">Github</a>
     </header>
   `;
 };

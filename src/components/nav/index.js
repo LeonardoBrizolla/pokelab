@@ -9,7 +9,7 @@ const createNavigation = () => {
   $head.insertBefore($style, null);
 
   return `
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark top-bar">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark top-bar fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">PokéLab</a>
     <button
