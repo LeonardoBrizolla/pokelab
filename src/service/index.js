@@ -5,11 +5,7 @@ async function getCardPokemon(pokemon) {
 
   const url = `https://api.pokemontcg.io/v2/cards?q=name:${pokemon}&orderBy=releaseDate`;
 
-  await fetch(url, {
-    headers: {
-      'X-Api-Key': '4d3087e7-14a8-4478-a743-ad91e2a07830',
-    },
-  }).then((response) => {
+  await fetch(url).then((response) => {
     response.json().then((cards) => {
       if (response.ok === true) {
         for (let index = 0; index < cards.count; index++) {
