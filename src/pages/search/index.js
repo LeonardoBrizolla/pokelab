@@ -27,6 +27,8 @@ const $cardsWrapper = createCardsWrapper();
 const $buttonTop = createButtonTop();
 const $footer = createFooter();
 
+const $modalNewsletter = createModalNewsLetter();
+
 $headerWrapper.insertAdjacentHTML('beforeend', $navigation);
 $headerWrapper.insertAdjacentHTML('beforeend', $header);
 
@@ -42,3 +44,4 @@ $imagesWrapper.insertAdjacentHTML('beforeend', $buttonTop);
 $root.insertAdjacentElement('beforeend', $headerWrapper);
 $root.insertAdjacentElement('beforeend', $mainWrapper);
 $root.insertAdjacentHTML('beforeend', $footer);
+$root.insertAdjacentHTML('beforeend', $modalNewsletter);

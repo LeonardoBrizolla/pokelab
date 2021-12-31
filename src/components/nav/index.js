@@ -26,6 +26,7 @@ const createNavigation = () => {
       background-color: #50fa7b;
       border-radius: 9px;
       transition: opacity 200ms linear;
+      cursor: pointer;
     }
 
     .navigation-pokelab .highlighted-pokelab:hover {
@@ -78,11 +79,13 @@ const createNavigation = () => {
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Buscar</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
-          </li>
           <li class="nav-item highlighted-pokelab">
-            <a class="nav-link -pokelab" href="#">News Letter &#10024</a>
+            <a
+              class="nav-link -pokelab"
+              data-bs-toggle="modal"
+              data-bs-target="#newsletterModal">
+                News Letter &#10024
+              </a>
           </li>
         </ul>
       </div>
