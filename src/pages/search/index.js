@@ -1,31 +1,44 @@
 const $root = document.querySelector('#root');
 
-const $containerWrapper = createContainerWrapper();
+const $headerWrapper = createHeaderWrapper();
 const $navigation = createNavigation();
 const $header = createHeader();
+
+const $mainWrapper = createMainWrapper();
+const $searchWrapper = createSearchWrapper();
 const $titleSearch = createTitleSearch({ title: 'Buscar' });
 const $inputSearch = createInputSearch({
   type: 'text',
-  placeholder: 'Digite um nome de Pokémon...',
+  placeholder: 'Gengar...',
   dataAttribute: 'input-search',
-  nameClass: 'form-control w-50 -pokelab p-2 fs-5 mb-5',
+  nameClass: 'form-control p-2 mb-3 search-pokelab',
+  spellcheck: 'false',
 });
 const $buttonSearch = createButtonSearch({
-  nameClass: 'btn btn-primary p-1 w-25 fs-5 mb-4',
+  nameClass: 'btn btn-primary button-search',
   type: 'submit',
   dataAttribute: 'button-search',
   onClick: 'handleClickSearchPokemon()',
-  textContent: 'Buscar Pokémon',
+  textContent: 'Buscar',
 });
+
+const $imagesWrapper = createImagesWrapper();
 const $cardsWrapper = createCardsWrapper();
+const $buttonTop = createButtonTop();
 const $footer = createFooter();
 
-$containerWrapper.insertAdjacentHTML('beforeend', $titleSearch);
-$containerWrapper.insertAdjacentHTML('beforeend', $inputSearch);
-$containerWrapper.insertAdjacentHTML('beforeend', $buttonSearch);
+$headerWrapper.insertAdjacentHTML('beforeend', $navigation);
+$headerWrapper.insertAdjacentHTML('beforeend', $header);
 
-$root.insertAdjacentHTML('beforeend', $navigation);
-$root.insertAdjacentHTML('beforeend', $header);
-$root.insertAdjacentElement('beforeend', $containerWrapper);
-$root.insertAdjacentElement('beforeend', $cardsWrapper);
+$mainWrapper.insertAdjacentElement('beforeend', $searchWrapper);
+$searchWrapper.insertAdjacentHTML('beforeend', $titleSearch);
+$searchWrapper.insertAdjacentHTML('beforeend', $inputSearch);
+$searchWrapper.insertAdjacentHTML('beforeend', $buttonSearch);
+
+$mainWrapper.insertAdjacentElement('beforeend', $imagesWrapper);
+$imagesWrapper.insertAdjacentElement('beforeend', $cardsWrapper);
+$imagesWrapper.insertAdjacentHTML('beforeend', $buttonTop);
+
+$root.insertAdjacentElement('beforeend', $headerWrapper);
+$root.insertAdjacentElement('beforeend', $mainWrapper);
 $root.insertAdjacentHTML('beforeend', $footer);

@@ -3,15 +3,15 @@ const createTitleSearch = ({ title }) => {
   const $style = document.createElement('style');
 
   $style.textContent = `
-		h1.-pokelab {
-			font-family: 'Roboto Slab', serif;
-			color: #ff79c6;
+		.title-search {
+			font-family: 'Pushster', cursive;
+			color: #bd93f9;
 		}
   `;
 
   $head.insertBefore($style, null);
 
   return `
-		<h1 class="-pokelab fs-1 mt-4 ">${title}</h1>
+		<h1 class="title-search fs-1 mt-4 ">${title}</h1>
 	`;
 };

@@ -7,6 +7,6 @@ function createCardsWrapper() {
   $cardsWrapper.classList.add('mt-3');
   $cardsWrapper.classList.add('sticky-bottom');
   $cardsWrapper.dataset.wrapper = 'cards-wrapper';
-
+  $cardsWrapper.id = 'cards-wrapper';
   return $cardsWrapper;
 }

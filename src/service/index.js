@@ -1,23 +1,35 @@
 async function getCardPokemon(pokemon) {
   const createPokemon = card();
+  // V1: https://api.pokemontcg.io/v1/cards?name=${pokemon}
+  // V2: https://api.pokemontcg.io/v2/cards?q=name:${pokemon}
 
-  await fetch(`https://api.pokemontcg.io/v1/cards?name=${pokemon}`)
-    .then((response) => response.json())
-    .then((data) => {
-      for (let index = 0; index < data.cards.length; index++) {
-        const $cardsWrapper = document.querySelector(
-          '[data-wrapper="cards-wrapper"]'
-        );
+  const url = `https://api.pokemontcg.io/v2/cards?q=name:${pokemon}&orderBy=releaseDate`;
 
-        const pokemon = {
-          name: data.cards[index].name,
-          card: data.cards[index].imageUrlHiRes,
-          nameClass: 'card -pokelab p-3',
-        };
+  await fetch(url, {
+    headers: {
+      'X-Api-Key': '4d3087e7-14a8-4478-a743-ad91e2a07830',
+    },
+  }).then((response) => {
+    response.json().then((cards) => {
+      if (response.ok === true) {
+        for (let index = 0; index < cards.count; index++) {
+          const $cardsWrapper = document.querySelector(
+            '[data-wrapper="cards-wrapper"]'
+          );
 
-        const $cardPokemon = createPokemon(pokemon);
+          const pokemon = {
+            name: cards.data[index].name,
+            card: cards.data[index].images.small,
+            nameClass: 'card mb-3 card-pokelab',
+          };
 
-        $cardsWrapper.insertAdjacentHTML('afterbegin', $cardPokemon);
+          const $cardPokemon = createPokemon(pokemon);
+
+          $cardsWrapper.insertAdjacentHTML('afterbegin', $cardPokemon);
+        }
+      } else {
+        throw new Error('Erro API');
       }
     });
+  });
 }
