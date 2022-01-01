@@ -82,8 +82,11 @@ const createNavigation = () => {
           <li class="nav-item highlighted-pokelab">
             <a
               class="nav-link -pokelab"
+              data-nav="btn-newsletter"
               data-bs-toggle="modal"
-              data-bs-target="#newsletterModal">
+              data-bs-target="#newsletterModal"
+              onClick="handleClickButtonNewsletter()"
+              >
                 News Letter &#10024
               </a>
           </li>

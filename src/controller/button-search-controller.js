@@ -1,4 +1,4 @@
-async function handleClickSearchPokemon() {
+const handleClickSearchPokemon = async () => {
   const $inputSearch = document.querySelector(`[data-search="input-search"]`);
   const $cardsWrapper = document.querySelector('#cards-wrapper');
   $cardsWrapper.remove();
@@ -10,4 +10,4 @@ async function handleClickSearchPokemon() {
   const pokemon = $inputSearch.value;
   await getCardPokemon(pokemon);
   window.location.href = '#cards-wrapper';
-}
+};
