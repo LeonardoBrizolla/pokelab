@@ -28,6 +28,12 @@ const createButtonTop = () => {
   $head.insertBefore($style, null);
 
   return `
-    <button onclick="topFunction()" id="myBtn" title="Ir para o topo">Topo</button>
+    <button
+      onclick="topFunction()"
+      id="myBtn"
+      title="Ir para o topo"
+    >
+      Topo
+    </button>
   `;
 };

@@ -5,12 +5,13 @@ const createModalNewsLetter = () => {
     dataAttribute: 'input-newsletter',
     nameClass: 'form-control p-2 mb-3 search-pokelab w-100',
     spellcheck: 'false',
+    pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$',
+    isRequired: true,
   });
   const $buttonNewsletter = createButtonSearch({
     nameClass: 'btn btn-primary button-newsletter',
     type: 'submit',
     dataAttribute: 'button-newsletter',
-    onClick: '',
     textContent: 'Inscrever-se',
   });
 
@@ -52,8 +53,8 @@ const createModalNewsLetter = () => {
       aria-labelledby="newsletterModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog ">
-        <div class="modal-content -wrapper">
+      <div class="modal-dialog">
+        <form class="modal-content -wrapper" method="GET" onSubmit="handleClickButtonSubscribe(event)">
           <div
             class="
               modal-header
@@ -79,7 +80,7 @@ const createModalNewsLetter = () => {
           align-items-center">
             ${$buttonNewsletter}
           </div>
-        </div>
+        </form>
       </div>
     </div>
   `;

@@ -1,18 +1,18 @@
-mybutton = document.querySelector('#myBtn');
+buttonTop = document.querySelector('#myBtn');
 
-window.onscroll = function () {
+window.onscroll = () => {
   scrollFunction();
 };
 
-function scrollFunction() {
+const scrollFunction = () => {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = 'block';
+    buttonTop.style.display = 'block';
   } else {
-    mybutton.style.display = 'none';
+    buttonTop.style.display = 'none';
   }
-}
+};
 
-function topFunction() {
+const topFunction = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
+};

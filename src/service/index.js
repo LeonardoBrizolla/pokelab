@@ -29,3 +29,14 @@ async function getCardPokemon(pokemon) {
     });
   });
 }
+
+const postEmailNewsletter = async (url, email) => {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+    },
+    body: JSON.stringify(email),
+  });
+  return response.json();
+};

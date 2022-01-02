@@ -13,12 +13,14 @@ const $inputSearch = createInputSearch({
   dataAttribute: 'input-search',
   nameClass: 'form-control p-2 mb-3 search-pokelab',
   spellcheck: 'false',
+  pattern: '[A-Za-z]+$',
+  isRequired: true,
 });
 const $buttonSearch = createButtonSearch({
   nameClass: 'btn btn-primary button-search',
   type: 'submit',
   dataAttribute: 'button-search',
-  onClick: 'handleClickSearchPokemon()',
+  onClick: '',
   textContent: 'Buscar',
 });
 

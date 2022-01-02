@@ -1,4 +1,5 @@
-const handleClickSearchPokemon = async () => {
+const handleSearchPokemon = async (event) => {
+  event.preventDefault();
   const $inputSearch = document.querySelector(`[data-search="input-search"]`);
   const $cardsWrapper = document.querySelector('#cards-wrapper');
   $cardsWrapper.remove();

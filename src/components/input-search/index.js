@@ -4,6 +4,8 @@ const createInputSearch = ({
   dataAttribute,
   nameClass,
   spellcheck,
+  pattern,
+  isRequired,
 }) => {
   const $head = document.querySelector('head');
   const $style = document.createElement('style');
@@ -40,6 +42,8 @@ const createInputSearch = ({
     data-search="${dataAttribute}"
     class="${nameClass}"
     spellcheck="${spellcheck}"
+    pattern="${pattern}"
+    required=${isRequired}
   />
 `;
 };
