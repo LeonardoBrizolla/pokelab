@@ -1,3 +1,16 @@
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+input::selection,
+button::selection,
+a::selection {
+  background-color: #8f44f8;
+}
+
 body {
   background-color: #282a36;
 }
