@@ -6,7 +6,10 @@ const $header = createHeader();
 
 const $mainWrapper = createMainWrapper();
 const $searchWrapper = createSearchWrapper();
-const $titleSearch = createTitleSearch({ title: 'Buscar' });
+const $titleSearch = createTitle({
+  nameClass: 'fs-1 mt-4 title-pokelab -search',
+  title: 'Buscar',
+});
 const $inputSearch = createInputSearch({
   type: 'text',
   placeholder: 'Gengar...',
