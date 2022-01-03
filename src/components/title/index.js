@@ -14,6 +14,10 @@ const createTitle = ({ nameClass, title }) => {
     .title-pokelab.-newsletter {
 			color: #50fa7b;
 		}
+
+    .title-pokelab.-error {
+			color: #ff5555;
+		}
   `;
   $head.insertBefore($style, null);
 
