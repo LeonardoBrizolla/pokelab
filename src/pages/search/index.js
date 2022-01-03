@@ -19,11 +19,10 @@ const $inputSearch = createInput({
   pattern: '[A-Za-z]+$',
   isRequired: true,
 });
-const $buttonSearch = createButtonSearch({
-  nameClass: 'btn btn-primary button-search',
+const $buttonSearch = createButton({
+  nameClass: 'btn btn-primary button-pokelab -search',
   type: 'submit',
   dataAttribute: 'button-search',
-  onClick: '',
   textContent: 'Buscar',
 });
 
