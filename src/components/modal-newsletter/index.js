@@ -1,9 +1,9 @@
 const createModalNewsLetter = () => {
-  const $inputSearch = createInputSearch({
+  const $inputNewsletter = createInput({
     type: 'text',
     placeholder: 'E-mail',
     dataAttribute: 'input-newsletter',
-    nameClass: 'form-control p-2 mb-3 search-pokelab w-100',
+    nameClass: 'form-control p-2 mb-3 w-100 input-pokelab -newsletter',
     spellcheck: 'false',
     pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$',
     isRequired: true,
@@ -74,7 +74,7 @@ const createModalNewsLetter = () => {
             <h6 class="-subtitle">Inscreva-se para receber as novidades</h6>
           </div>
           <div class="modal-body">
-            ${$inputSearch}
+            ${$inputNewsletter}
           </div>
           <div class="modal-footer -footer d-flex justify-content-center
           align-items-center">

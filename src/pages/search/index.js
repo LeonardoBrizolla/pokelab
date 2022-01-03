@@ -10,11 +10,11 @@ const $titleSearch = createTitle({
   nameClass: 'fs-1 mt-4 title-pokelab -search',
   title: 'Buscar',
 });
-const $inputSearch = createInputSearch({
+const $inputSearch = createInput({
   type: 'text',
   placeholder: 'Gengar...',
   dataAttribute: 'input-search',
-  nameClass: 'form-control p-2 mb-3 search-pokelab',
+  nameClass: 'form-control p-2 mb-3 input-pokelab -search',
   spellcheck: 'false',
   pattern: '[A-Za-z]+$',
   isRequired: true,

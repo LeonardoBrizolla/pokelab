@@ -1,4 +1,4 @@
-const createInputSearch = ({
+const createInput = ({
   type,
   placeholder,
   dataAttribute,
@@ -10,16 +10,16 @@ const createInputSearch = ({
   const $head = document.querySelector('head');
   const $style = document.createElement('style');
   $style.textContent = `
-  .search-pokelab {
+  .input-pokelab.-search {
     border: solid 2px #bd93f9;
   }
 
-  .search-pokelab.form-control {
+  .input-pokelab.-search.form-control {
     background-color: #383a59;
     color: #bd93f9;
   }
 
-  .search-pokelab.form-control:focus {
+  .input-pokelab.-search.form-control:focus {
     color: #bd93f9;
     background-color: #383a59;
     border-color: #bd93f9;
@@ -27,8 +27,25 @@ const createInputSearch = ({
     box-shadow: 0 0 0 0.25rem rgba(189, 147, 249, 0.25);
   }
 
+  .input-pokelab.-newsletter {
+    border: solid 2px #50fa7b;
+  }
+
+  .input-pokelab.-newsletter.form-control {
+    background-color: #383a59;
+    color: #50fa7b;
+  }
+
+  .input-pokelab.-newsletter.form-control:focus {
+    color: #50fa7b;
+    background-color: #383a59;
+    border-color: #50fa7b;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(80, 250, 123, 0.5);
+  }
+
   @media (min-width: 700px) {
-    .search-pokelab {
+    .input-pokelab {
       width: 50%;
     }
   }
@@ -39,7 +56,7 @@ const createInputSearch = ({
   <input
     type="${type}"
     placeholder="${placeholder}"
-    data-search="${dataAttribute}"
+    data-input="${dataAttribute}"
     class="${nameClass}"
     spellcheck="${spellcheck}"
     pattern="${pattern}"
