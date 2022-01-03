@@ -1,4 +1,4 @@
-const handleClickButtonSubscribe = async (event) => {
+const handleClickSubscribe = async (event) => {
   event.preventDefault();
   const $inputEmailNewsletter = document.querySelector(
     `[data-input="input-newsletter"]`

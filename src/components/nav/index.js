@@ -85,7 +85,7 @@ const createNavigation = () => {
               data-nav="btn-newsletter"
               data-bs-toggle="modal"
               data-bs-target="#newsletterModal"
-              onClick="handleClickButtonNewsletter()"
+              onClick="handleClickNewsletter()"
               >
                 News Letter &#10024
               </a>

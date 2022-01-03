@@ -54,7 +54,7 @@ const createModalNewsLetter = () => {
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <form class="modal-content -wrapper" method="GET" onSubmit="handleClickButtonSubscribe(event)">
+        <form class="modal-content -wrapper" method="GET" onSubmit="handleClickSubscribe(event)">
           <div
             class="
               modal-header
