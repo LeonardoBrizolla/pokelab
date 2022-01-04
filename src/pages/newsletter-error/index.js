@@ -6,7 +6,7 @@ const $header = createHeader();
 
 const $mainWrapper = createMainWrapper();
 const $newsletterWrapper = createNewsletterWrapper();
-const $titleNewsletter = createTitle({
+const $infoError = createInfoError({
   nameClass: 'fs-1 mt-4 title-pokelab -error',
   title: 'Erro ao inscrever-se!',
 });
@@ -18,7 +18,7 @@ $headerWrapper.insertAdjacentHTML('beforeend', $navigation);
 $headerWrapper.insertAdjacentHTML('beforeend', $header);
 
 $mainWrapper.insertAdjacentElement('beforeend', $newsletterWrapper);
-$newsletterWrapper.insertAdjacentHTML('beforeend', $titleNewsletter);
+$newsletterWrapper.insertAdjacentHTML('beforeend', $infoError);
 
 $root.insertAdjacentElement('beforeend', $headerWrapper);
 $root.insertAdjacentElement('beforeend', $mainWrapper);

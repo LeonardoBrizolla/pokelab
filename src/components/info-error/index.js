@@ -1,13 +1,13 @@
-const createInfoError = () => {
+const createInfoError = ({ nameClass, title }) => {
   const $title = createTitle({
-    nameClass: 'fs-1 mt-4 title-pokelab -error',
-    title: 'Erro ao pesquisar!',
+    nameClass,
+    title,
   });
 
   return `
     <div class="d-flex flex-column align-items-center justify-content-center">
       ${$title}
-      <img src="../../../img/gastly.gif" alt="Gastly gif"  width="200" />
+      <img src="../../../img/gengar-error.gif" alt="Gastly gif"  width="400" />
     </div>
   `;
 };

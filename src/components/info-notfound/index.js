@@ -1,7 +1,7 @@
-const createInfoNotFound = () => {
+const createInfoNotFound = ({ nameClass, title }) => {
   const $title = createTitle({
-    nameClass: 'fs-1 mt-4 title-pokelab -search',
-    title: 'Pokémon não encontrado!',
+    nameClass,
+    title,
   });
 
   return `

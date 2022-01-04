@@ -2,8 +2,14 @@ const handleSearchPokemon = async (event) => {
   event.preventDefault();
 
   const cardPokemon = createCard();
-  const $infoNotFound = createInfoNotFound();
-  const $infoError = createInfoError();
+  const $infoNotFound = createInfoNotFound({
+    nameClass: 'fs-1 mt-4 title-pokelab -search',
+    title: 'Pokémon não encontrado!',
+  });
+  const $infoError = createInfoError({
+    nameClass: 'fs-1 mt-4 title-pokelab -error',
+    title: 'Erro ao pesquisar!',
+  });
   const $inputSearch = document.querySelector(`[data-input="input-search"]`);
   const $cardsWrapper = document.querySelector('#cards-wrapper');
   $cardsWrapper.remove();
