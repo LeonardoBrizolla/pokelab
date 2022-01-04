@@ -6,8 +6,8 @@ const $header = createHeader();
 
 const $mainWrapper = createMainWrapper();
 const $newsletterWrapper = createNewsletterWrapper();
-const $titleNewsletter = createTitle({
-  nameClass: 'fs-1 mt-4 title-pokelab -newsletter',
+const $titleInfoSuccess = createInfoSuccess({
+  nameClass: 'fs-1 mt-4 mb-5 title-pokelab -newsletter',
   title: 'Inscrição realizada com Sucesso!',
 });
 
@@ -18,7 +18,7 @@ $headerWrapper.insertAdjacentHTML('beforeend', $navigation);
 $headerWrapper.insertAdjacentHTML('beforeend', $header);
 
 $mainWrapper.insertAdjacentElement('beforeend', $newsletterWrapper);
-$newsletterWrapper.insertAdjacentHTML('beforeend', $titleNewsletter);
+$newsletterWrapper.insertAdjacentHTML('beforeend', $titleInfoSuccess);
 
 $root.insertAdjacentElement('beforeend', $headerWrapper);
 $root.insertAdjacentElement('beforeend', $mainWrapper);

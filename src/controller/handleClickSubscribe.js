@@ -9,14 +9,19 @@ const handleClickSubscribe = async (event) => {
     email: emailText,
   };
 
-  await postEmailNewsletter(
-    'https://prog-bolsas-api.herokuapp.com/',
-    email
-  ).then((data) => {
+  try {
+    const data = await postEmailNewsletter(
+      'https://prog-bolsas-api.herokuapp.com/',
+      email
+    );
+
     if (data.success) {
       window.location.href = '../../newsletter-success.html';
     } else {
-      window.location.href = '../../newsletter-error.html';
+      throw new Error('Erro API');
     }
-  });
+  } catch (err) {
+    console.log(err);
+    window.location.href = '../../newsletter-error.html';
+  }
 };
