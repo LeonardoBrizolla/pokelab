@@ -3,6 +3,7 @@ const handleSearchPokemon = async (event) => {
 
   const cardPokemon = createCard();
   const $infoNotFound = createInfoNotFound();
+  const $infoError = createInfoError();
   const $inputSearch = document.querySelector(`[data-input="input-search"]`);
   const $cardsWrapper = document.querySelector('#cards-wrapper');
   $cardsWrapper.remove();
@@ -41,6 +42,12 @@ const handleSearchPokemon = async (event) => {
     window.location.href = '#cards-wrapper';
   } catch (err) {
     console.log(err);
+    window.location.href = '#cards-wrapper';
+    $inputSearch.select();
+    $inputSearch.focus();
+    $inputSearch.value = '';
+
+    return $newCardsWrapper.insertAdjacentHTML('beforeend', $infoError);
   }
 
   $inputSearch.select();
