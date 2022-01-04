@@ -18,6 +18,10 @@ const createTitle = ({ nameClass, title }) => {
     .title-pokelab.-error {
 			color: #ff5555;
 		}
+
+    .title-pokelab.-about {
+			color: #ff79c6;
+		}
   `;
   $head.insertBefore($style, null);
 

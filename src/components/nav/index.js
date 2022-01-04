@@ -79,6 +79,9 @@ const createNavigation = () => {
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Buscar</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../../../about.html">Sobre</a>
+          </li>
           <li class="nav-item highlighted-pokelab">
             <a
               class="nav-link -pokelab"

@@ -33,7 +33,7 @@ const createHeader = () => {
 
   @media (max-width: 555px) {
     .header-pokelab > .text {
-      font-size: 0.9rem;
+      font-size: 0.7rem;
     }
   }
   `;
