@@ -13,7 +13,6 @@ const handleClickSubscribe = async (event) => {
     'https://prog-bolsas-api.herokuapp.com/',
     email
   ).then((data) => {
-    console.log(data.success);
     if (data.success) {
       window.location.href = '../../newsletter-success.html';
     } else {

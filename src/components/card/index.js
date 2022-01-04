@@ -1,4 +1,4 @@
-const card = () => {
+const createCard = () => {
   const $head = document.querySelector('head');
   const $style = document.createElement('style');
   $style.textContent = `
@@ -11,7 +11,7 @@ const card = () => {
 
     .card-pokelab:hover {
       transform: scale(1.1);
-      z-index: 2000;
+      z-index: 1;
     }
   `;
   $head.insertBefore($style, null);

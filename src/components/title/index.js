@@ -9,6 +9,8 @@ const createTitle = ({ nameClass, title }) => {
 
 		.title-pokelab.-search {
 			color: #bd93f9;
+      font-size: 4em;
+      margin-bottom: 2rem;
 		}
 
     .title-pokelab.-newsletter {
