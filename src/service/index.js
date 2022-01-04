@@ -1,7 +1,5 @@
 async function getCardPokemon(pokemon) {
   const createPokemon = card();
-  // V1: https://api.pokemontcg.io/v1/cards?name=${pokemon}
-  // V2: https://api.pokemontcg.io/v2/cards?q=name:${pokemon}
 
   const url = `https://api.pokemontcg.io/v2/cards?q=name:${pokemon}&orderBy=releaseDate`;
 
